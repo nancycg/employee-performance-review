@@ -1,10 +1,11 @@
 ## Author : Nancy Chauhan
 
 Technologies used:
-    a) Front end: React
-    b) Back end: Node
-    c) Database: Mongodb(NoSQL)
-    d) Code Editor: VS code (Visual Studio)
+
+    Front end: React
+    Back end: Node
+    Database: Mongodb(NoSQL)
+    Code Editor: VS code (Visual Studio)
 
 -----------------------------------------------------------
 Pre-requisite:
