@@ -1,68 +1,79 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Author : Nancy Chauhan
 
-## Available Scripts
+Technologies used:
+a) Front end: React
+b) Back end: Node
+c) Database: Mongodb(NoSQL)
+d) Code Editor: VS code (Visual Studio)
 
-In the project directory, you can run:
+Pre-requisite:
 
-### `npm start`
+•Install mongoDB and run on your machine(window or MAC)
+•Install node.js(v10.15.3) runtime environment 
+•Install Node Package manager-npm(v6.4.1)
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+-----------------------------------------------------------
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+Important: 
+Database with name ‘reviewdb’ will get created automatically when you insert employee data using ‘Add Employee’ button on UI. I did not use authentication so far in database for simplicity. For better understanding of code, I have included detailed comments in code. Please review the code and find the assumptions and details there.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1- MONGO DB setup
 
-### `npm run build`
+    I have used 'Mongo Campass Tool' for DB
+    DB will get created on first insertion of record from UI, so you need not to create anything. Just make sure that mongoddb is up and running.
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2.1 - Run Using Command Prompt (Skip this step if you want to run using VS code)
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+    Open command prompt and navigate to folder where project is saved. For example, my project is in D drive inside EXPERIMENT folder and my project name is “employee-performance-review”
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+        start the client:
+        =>npm start
 
-### `npm run eject`
+    Open another command prompt and navigate to folder where project is saved. For example, my project is in D drive inside EXPERIMENT folder and my project name is “employee-performance-review”.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+        Go to server folder (cd server) and run below command to run server:
+        =>‘node server.js’
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+        Browser should automatically open up with following URL:
+        http://localhost:3000/employee/
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+2.2 - Run Using VS Code(Visual Studio) Editor
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+    Open command prompt and navigate to folder where project is saved. For example, my project is in D drive inside EXPERIMENT folder and my project name is “employee-performance-review”.
+    Now run command ‘code .’ to open the project in VS code(visual studio code editor).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+    Project opened in VS code editor, to install node_modules 
+        => npm i
+    Run Client 
+        => npm start
 
-### Code Splitting
+    TIP - Shortcut to open terminal (ctrl + `) or say (ctrl + back tic) in VS code for MAC
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+    Open new terminal to run server.Server.js is starting point for application and having DB connection and http port connection details.
 
-### Analyzing the Bundle Size
+    run server 
+        =>node server/server.js
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
 
-### Making a Progressive Web App
+3 - API end points:
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+    Client:
+    http://localhost:3000
+    Or
+    http://localhost:3000/employee
+    Server: Using ‘Postman’(Chrome extension) to test backend
+    GET: 
+    http://localhost:3900/emp/
+    or
+    http://localhost:3900/emp/:id
 
-### Advanced Configuration
+    POST:
+    http://localhost:3900/emp/  with data in body.
+    PUT:
+    http://localhost:3900/emp/:id
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+    DELETE:
+    http://localhost:3900/emp/:id
